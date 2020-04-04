@@ -20,5 +20,5 @@ import helloWorld.home
 
 urlpatterns = [
     path('', include(('helloWorld.home.urls','home') , namespace= 'home')),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name = 'admin'),
 ]
