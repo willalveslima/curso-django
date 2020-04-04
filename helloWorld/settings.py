@@ -123,3 +123,14 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'helloWorld', 'media')
 MEDIA_URL = '/media/'
+
+# E-mails
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'teste <w.alves.lima@gmail.com>'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'w.alves.lima@gmail.com'
+EMAIL_HOST_PASSWORD = 'senha'
+EMAIL_PORT = 587
+
+CONTACT_EMAIL = 'w.alves.lima@hotmail.com'
