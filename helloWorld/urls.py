@@ -15,10 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include,path
+from django.conf import settings
+from django.conf.urls.static import static
 import helloWorld.home
+import helloWorld.courses
 
 
 urlpatterns = [
     path('', include(('helloWorld.home.urls','home') , namespace= 'home')),
-    path('admin/', admin.site.urls, name = 'admin'),
+    path('cursos/', include(('helloWorld.courses.urls','courses') , namespace= 'courses')),
+    path('admin/', admin.site.urls),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

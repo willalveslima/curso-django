@@ -2,3 +2,6 @@
 helloWorld/__pycache__/*
 *.pyc
 **/migrations/*
+*.jpg
+*.png
+*.gif
