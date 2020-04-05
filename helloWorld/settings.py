@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+#my apps
     'helloWorld.home',
+    'helloWorld.accounts',
     'helloWorld.courses'
 ]
 
@@ -134,3 +136,9 @@ EMAIL_HOST_PASSWORD = 'senha'
 EMAIL_PORT = 587
 
 CONTACT_EMAIL = 'w.alves.lima@hotmail.com'
+
+# Auth
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'home:home'
+LOGOUT_URL = 'accounts:logout'
+LOGOUT_REDIRECT_URL = 'home:home'
