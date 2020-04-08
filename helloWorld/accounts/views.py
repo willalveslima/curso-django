@@ -7,6 +7,8 @@ from django.conf import settings
 from django.contrib import messages
 
 from helloWorld.home.utils import generate_hash_key
+from helloWorld.courses.models import Enrollment
+
 from .forms import RegisterForm, EditAccountForm, PasswordResetForm
 from .models import PasswordReset
 
@@ -15,7 +17,8 @@ User = get_user_model()
 @login_required
 def dashboard(request):
     template_name = 'accounts/dashboard.html'
-    return render(request, template_name)
+    context = {}
+    return render(request, template_name, context)
 
 def register(request):
     template_name = 'registration/register.html'
@@ -55,7 +58,6 @@ def password_reset_confirm(request, key):
         context['success'] = True
     context['form'] = form
     return render(request, template_name, context)
-
 
 @login_required
 def edit(request):

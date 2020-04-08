@@ -34,7 +34,7 @@
             {% else %}
             <img src="{% static 'img/course-image.png' %}" alt="" />
             {% endif %}
-            <h4>DÃºvidas?</h4>
+            <h4>Dúvidas?</h4>
             <p>
                 <a href="#contato" title="" class="pure-button">Fale Conosco</a>
             </p>
@@ -43,9 +43,9 @@
 </div>
 <div class="pure-g-r content-ribbon" id="contato">
     <div class="pure-u-1">
-        <h3>Tire sua dÃºvida sobre o Curso</h3>
+        <h3>Tire sua dúvida sobre o Curso</h3>
         {% if is_valid %}
-        <p>VocÃª enviou o formulÃ¡rio com sucesso</p>
+        <p>Você enviou o formulário com sucesso</p>
         {% endif %}
         <form action="#contato" class="pure-form pure-form-aligned" method="post">
             {% csrf_token %}
