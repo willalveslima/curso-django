@@ -4,6 +4,8 @@ from django.conf import settings
 
 from helloWorld.home.mails import send_mail_template
 
+from .models import Comment
+
 
 class ContactCourse(forms.Form):
 
@@ -39,3 +41,9 @@ class ContactCourse(forms.Form):
     #         subject, message, settings.DEFAULT_FROM_EMAIL, 
     #         [settings.CONTACT_EMAIL]
     #     )
+
+class CommentForm(forms.ModelForm):
+
+    class Meta:
+        model = Comment
+        fields = ['comment']
