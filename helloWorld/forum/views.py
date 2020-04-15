@@ -92,16 +92,11 @@ class ReplyCorrectView(View):
         reply.correct = self.correct
         reply.save()
         message = 'Resposta atualizada com sucesso'
-        print("PASSEI POR AQUI 1")
         if request.is_ajax():
-            print("PASSEI POR AQUI 2")
             data = {'success': True, 'message': message}
-            print("PASSEI POR AQUI 3")
             return HttpResponse(json.dumps(data), content_type='application/json')
         else:
-            print("PASSEI POR AQUI 4")
             messages.success(request, message)
-            print("PASSEI POR AQUI 5")
             return redirect(reply.thread.get_absolute_url())
 
 
