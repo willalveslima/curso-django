@@ -98,8 +98,7 @@ class ReplyCorrectView(View):
         else:
             messages.success(request, message)
             return redirect(reply.thread.get_absolute_url())
-
-
+            
 index = ForumView.as_view()
 thread = ThreadView.as_view()
 reply_correct = ReplyCorrectView.as_view()
