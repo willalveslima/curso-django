@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include(('helloWorld.home.urls','home') , namespace= 'home')),
     path('cursos/', include(('helloWorld.courses.urls','courses') , namespace= 'courses')),
     path('contas/', include(('helloWorld.accounts.urls','accounts') , namespace= 'accounts')),
+    path('forum/', include(('helloWorld.forum.urls','forum') , namespace= 'forum')),
     path('admin/', admin.site.urls),
 ]
 if settings.DEBUG:

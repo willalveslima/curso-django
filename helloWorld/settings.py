@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #libs
+    'taggit',
 #my apps
     'helloWorld.home',
     'helloWorld.accounts',
-    'helloWorld.courses'
+    'helloWorld.courses',
+    'helloWorld.forum',
 ]
 
 MIDDLEWARE = [
